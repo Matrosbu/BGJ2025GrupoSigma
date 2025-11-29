@@ -4,13 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bux6f8h4gm3bg" path="res://PlaceHoldersArte/bomhqZnTQyqVsW-YJh6tcw.webp" id="2_6ekb8"]
 [ext_resource type="Texture2D" uid="uid://cjjtn8kvi3pj" path="res://icon.svg" id="3_nma2j"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m64gt"]
-size = Vector2(20, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m64gt"]
-atlas = ExtResource("2_6ekb8")
-region = Rect2(0, 448, 256, 448)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_htr4d"]
 atlas = ExtResource("2_6ekb8")
 region = Rect2(256, 448, 256, 448)
@@ -27,12 +20,13 @@ region = Rect2(768, 448, 256, 448)
 atlas = ExtResource("2_6ekb8")
 region = Rect2(1024, 448, 256, 448)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_m64gt"]
+atlas = ExtResource("2_6ekb8")
+region = Rect2(0, 448, 256, 448)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_x3eyv"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m64gt")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_htr4d")
 }, {
@@ -44,6 +38,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cvt5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m64gt")
 }],
 "loop": false,
 "name": &"attack",
@@ -59,19 +56,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ekb8"]
-size = Vector2(137, 40.5)
+size = Vector2(26.75, 8.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uljyr"]
-size = Vector2(64, 97)
+size = Vector2(14, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m64gt"]
+size = Vector2(21, 48)
 
 [node name="jugador" type="CharacterBody2D"]
 script = ExtResource("1_uljyr")
 
-[node name="HitboxFisica" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_m64gt")
-
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.75)
+position = Vector2(0.5000019, -0.9999962)
+scale = Vector2(0.08203124, 0.10714287)
 sprite_frames = SubResource("SpriteFrames_x3eyv")
 animation = &"attack"
 
@@ -79,15 +77,21 @@ animation = &"attack"
 position = Vector2(33, 49)
 
 [node name="AttackHitbox" type="CollisionShape2D" parent="HitboxGolpe"]
-visible = false
-position = Vector2(66, -50)
+position = Vector2(-15, -57)
 shape = SubResource("RectangleShape2D_6ekb8")
+debug_color = Color(1, 0.0013254246, 0.09850671, 0.41960785)
 
 [node name="HurtBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-1, -0.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_uljyr")
+debug_color = Color(0.84494513, 0.0010248, 0.91316384, 0.41960785)
+
+[node name="HitboxFisica" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_m64gt")
+debug_color = Color(0, 0.56141794, 0.8800112, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

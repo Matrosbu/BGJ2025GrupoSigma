@@ -3,18 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://drorq1nfclsnn" path="res://juego/juego.tscn" id="1_xvndu"]
 [ext_resource type="PackedScene" uid="uid://cth6lq0dr0lbn" path="res://UI/ui.tscn" id="2_nb3qj"]
 
-[node name="Main" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Main" type="Node2D"]
 
 [node name="2D" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
 [node name="Juego" parent="2D" instance=ExtResource("1_xvndu")]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="UI" instance=ExtResource("2_nb3qj")]
+offset_left = -573.0
+offset_top = -317.0
+offset_right = -573.0
+offset_bottom = -317.0
+
+[editable path="2D/Juego"]
+[editable path="2D/Juego/CharacterBody2D"]

@@ -4,11 +4,11 @@ var speed = 300.0
 var jump_speed = -400.0
 var is_attacking = false
 
-
 # Get the gravity from the project settings so you can sync with rigid body nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-
+func _ready() -> void:
+	add_to_group("player")
 func _physics_process(delta):
 	# Add the gravity.
 	velocity.y += gravity * delta

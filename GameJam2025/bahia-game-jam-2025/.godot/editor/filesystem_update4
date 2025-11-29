@@ -1,7 +1,4 @@
-res://juego/character_body_2d.gd
-res://main.tscn
-res://juego/juego.tscn
-res://juego/Enemigo.tscn
-res://juego/jugador.tscn
-res://juego/juego.gd
-res://juego/enemigo.gd
+res://juego/EnemigoLanzador.tscn
+res://juego/proyectil_enemigo.gd
+res://juego/enemigo_lanzador.gd
+res://juego/ProyectilEnemigoLanzador.tscn

@@ -59,7 +59,7 @@ animations = [{
 size = Vector2(26.75, 8.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uljyr"]
-size = Vector2(14, 44)
+size = Vector2(25, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m64gt"]
 size = Vector2(21, 48)
@@ -84,7 +84,7 @@ debug_color = Color(1, 0.0013254246, 0.09850671, 0.41960785)
 [node name="HurtBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(0, 1)
+position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_uljyr")
 debug_color = Color(0.84494513, 0.0010248, 0.91316384, 0.41960785)
 

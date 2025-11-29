@@ -67,12 +67,17 @@ func activar_iframe():
 func die():
 	get_tree().change_scene_to_file("res://GameOver.tscn")
 	
+func win():
+	get_tree().change_scene_to_file("res://YouWin.tscn")
+	
 	
 func _on_hurt_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		take_damage(10)
 	if body.is_in_group("proyectil"):	
 		take_damage(15)
+	if body.is_in_group("meta"):
+		win()
 
 
 func _on_sprite_frame_changed() -> void:

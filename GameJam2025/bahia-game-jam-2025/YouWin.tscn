@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4am880l2t6u0"]
+
+[ext_resource type="Script" uid="uid://b5x7hjhr7e8px" path="res://you_win.gd" id="1_oruqf"]
+
+[sub_resource type="SystemFont" id="SystemFont_jac7q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bi7tr"]
+font = SubResource("SystemFont_jac7q")
+font_size = 40
+
+[sub_resource type="SystemFont" id="SystemFont_pewpu"]
+
+[sub_resource type="SystemFont" id="SystemFont_2wggh"]
+
+[node name="YouWin" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_oruqf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -576.0
+offset_top = -325.0
+offset_right = 578.0
+offset_bottom = 324.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.16900001
+anchor_right = 0.5
+anchor_bottom = 0.16900001
+offset_left = -440.0
+offset_top = -54.681007
+offset_right = 443.0
+offset_bottom = 58.318993
+text = "¡Has ganado! Derrotaste a todos los enemigos
+ y te has convertido en un idolo bahiense."
+label_settings = SubResource("LabelSettings_bi7tr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Replay" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.277
+anchor_top = 0.61600006
+anchor_right = 0.277
+anchor_bottom = 0.61600006
+offset_left = -179.65802
+offset_top = -37.784027
+offset_right = 179.34198
+offset_bottom = 37.215973
+theme_override_fonts/font = SubResource("SystemFont_pewpu")
+theme_override_font_sizes/font_size = 33
+text = "Volver a jugar"
+
+[node name="MainMenu" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.73
+anchor_top = 0.61800003
+anchor_right = 0.73
+anchor_bottom = 0.61800003
+offset_left = -179.42004
+offset_top = -39.08203
+offset_right = 178.57996
+offset_bottom = 38.91797
+theme_override_fonts/font = SubResource("SystemFont_2wggh")
+theme_override_font_sizes/font_size = 34
+text = "Ir al menu principal"
+
+[node name="Exit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.83100003
+anchor_right = 0.499
+anchor_bottom = 0.83100003
+offset_left = -178.84601
+offset_top = -39.31903
+offset_right = 179.15399
+offset_bottom = 38.68097
+theme_override_fonts/font = SubResource("SystemFont_2wggh")
+theme_override_font_sizes/font_size = 34
+text = "Salir"
+
+[connection signal="pressed" from="Panel/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Panel/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Panel/Exit" to="." method="_on_exit_pressed"]

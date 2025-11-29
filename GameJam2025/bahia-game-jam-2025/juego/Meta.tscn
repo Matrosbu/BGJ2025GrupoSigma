@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://djb48i2up0yg7"]
+[gd_scene load_steps=5 format=3 uid="uid://djb48i2up0yg7"]
 
 [ext_resource type="Texture2D" uid="uid://dykdbcl27r57e" path="res://PlaceHoldersArte/flag-7560075_640.webp" id="1_avtwn"]
+[ext_resource type="Script" uid="uid://bul0tmqqqfm2p" path="res://juego/meta.gd" id="1_ie6df"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ie6df"]
 animations = [{
@@ -16,7 +17,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi4kc"]
 size = Vector2(28, 72)
 
-[node name="Meta" type="Area2D"]
+[node name="Meta" type="RigidBody2D"]
+script = ExtResource("1_ie6df")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2.026558e-06, 1.6093254e-06)

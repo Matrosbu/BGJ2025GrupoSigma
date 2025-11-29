@@ -1,4 +1,7 @@
 CollisionShape2D
+Area2D
+AnimatedSprite2D
+AnimationPlayer
 Sprite2D
 StaticBody2D
 CanvasLayer

@@ -1,8 +1,11 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764425182
+::res://::1764427382
 icon.svg::CompressedTexture2D::159538204346556167::1764425070::1764425184::1::::<><><>0<>0<>4d0fb44170180ed403a2adedd83f5683<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 main.tscn::PackedScene::1265680158756875627::1764425070::0::1::::<><><>0<>0<><>::uid://drorq1nfclsnn::::res://juego/juego.tscn<>uid://cth6lq0dr0lbn::::res://UI/ui.tscn
-::res://juego/::1764425070
-juego.tscn::PackedScene::8382435828982063335::1764425070::0::1::::<><><>0<>0<><>::
+::res://juego/::1764426797
+juego.tscn::PackedScene::8382435828982063335::1764426797::0::1::::<><><>0<>0<><>::uid://bx6qfmxs4x33r::::res://juego/character_body_2d.gd<>uid://cjjtn8kvi3pj::::res://icon.svg
+character_body_2d.gd::GDScript::4065740865265718849::1764425612::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://PlaceHoldersArte/::1764427385
+bomhqZnTQyqVsW-YJh6tcw.webp::CompressedTexture2D::3839571145952743480::1764427385::1764427388::1::::<><><>0<>0<>642c1ea9e3fc8249a588aedda22c21e9<>res://.godot/imported/bomhqZnTQyqVsW-YJh6tcw.webp-a25cff9478120c55a34a80efc08a823f.ctex::
 ::res://UI/::1764425070
 ui.tscn::PackedScene::6122782790449682131::1764425070::0::1::::<><><>0<>0<><>::

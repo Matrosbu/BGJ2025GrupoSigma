@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 res://menu_principal.gd
 res://MenuPrincipal.tscn
+=======
+res://juego/ProyectilEnemigoLanzador.tscn
+res://juego/enemigo_lanzador.gd
+>>>>>>> 400b69bec0678edcd0a93c2c6997d63cbe4d5913

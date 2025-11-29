@@ -46,6 +46,8 @@ func take_damage(amount):
 	vida -= amount
 	activar_iframe()
 	print("HP Jugador:" , vida)
+	if vida <= 0:
+		die()
 
 func activar_iframe():
 	iframe = true
@@ -63,7 +65,8 @@ func activar_iframe():
 	
 	
 func die():
-	pass ##a implementar jeje 
+	get_tree().change_scene_to_file("res://GameOver.tscn")
+	
 	
 func _on_hurt_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):

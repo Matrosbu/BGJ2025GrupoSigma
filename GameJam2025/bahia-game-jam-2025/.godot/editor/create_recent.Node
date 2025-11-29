@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 AnimatedSprite2D
 Sprite2D
 CollisionShape2D
 Area2D
 Camera2D
+=======
+>>>>>>> 2bbf32c9fc9aba0896ad3a7347416561bf83f026
 Button
+VBoxContainer
 Label
+Panel
+Camera2D
 CanvasLayer
 Node2D
 Marker2D
 Timer
 Marker2D
 CharacterBody2D
+<<<<<<< HEAD
 RigidBody2D
+=======
+>>>>>>> 2bbf32c9fc9aba0896ad3a7347416561bf83f026

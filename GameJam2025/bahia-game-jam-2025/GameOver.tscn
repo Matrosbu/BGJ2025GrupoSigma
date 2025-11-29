@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw81ir4k6ekyv"]
+
+[ext_resource type="Script" uid="uid://j8i7uqvo4nti" path="res://game_over.gd" id="1_40baj"]
+
+[sub_resource type="Theme" id="Theme_4g1ep"]
+
+[sub_resource type="SystemFont" id="SystemFont_40baj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a1htc"]
+font = SubResource("SystemFont_40baj")
+font_size = 50
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40baj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 104.0
+offset_right = 964.0
+offset_bottom = 173.0
+theme = SubResource("Theme_4g1ep")
+theme_override_font_sizes/font_size = 63
+text = "HAS PERDIDO! NT BRO"
+label_settings = SubResource("LabelSettings_a1htc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonReintentar" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 374.0
+offset_right = 424.0
+offset_bottom = 483.0
+text = "REINTENTAR"
+
+[node name="ButtonMenuPrincipal" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 382.0
+offset_right = 976.0
+offset_bottom = 485.0
+text = "SALIR AL MENU"
+
+[connection signal="pressed" from="Panel/ButtonReintentar" to="." method="_on_button_reintentar_pressed"]
+[connection signal="pressed" from="Panel/ButtonMenuPrincipal" to="." method="_on_button_menu_principal_pressed"]

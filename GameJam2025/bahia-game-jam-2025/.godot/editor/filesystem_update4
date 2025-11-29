@@ -5,3 +5,4 @@ res://juego/enemigo.gd
 res://juego/jugador.tscn
 res://main.tscn
 res://juego/Meta.tscn
+res://juego/jugador.gd

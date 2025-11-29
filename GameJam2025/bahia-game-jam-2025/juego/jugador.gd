@@ -68,6 +68,8 @@ func die():
 func _on_hurt_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		take_damage(10)
+	if body.is_in_group("proyectil"):
+		take_damage(15)
 
 
 func _on_sprite_frame_changed() -> void:

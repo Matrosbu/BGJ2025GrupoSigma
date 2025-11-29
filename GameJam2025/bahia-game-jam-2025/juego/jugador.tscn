@@ -65,6 +65,7 @@ size = Vector2(25, 49)
 size = Vector2(21, 48)
 
 [node name="jugador" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_uljyr")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]

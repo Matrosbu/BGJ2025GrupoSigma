@@ -74,7 +74,7 @@ func win():
 func _on_hurt_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		take_damage(10)
-	if body.is_in_group("proyectil"):	
+	if body.is_in_group("proyectil"):
 		take_damage(15)
 	if body.is_in_group("meta"):
 		win()

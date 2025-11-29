@@ -99,6 +99,8 @@ animations = [{
 radius = 21.0
 
 [node name="ProyectilEnemigoLanzador" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_1j6ta")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

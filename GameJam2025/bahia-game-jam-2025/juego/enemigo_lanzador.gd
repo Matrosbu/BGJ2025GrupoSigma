@@ -2,6 +2,7 @@ extends CharacterBody2D # Or whatever your enemy's root node is
 
 @onready var spawn_proyectile: Node2D = $SpawnProyectil # Path to your projectile spawn point
 var player
+var hp = 100
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	add_to_group("enemy")
@@ -23,3 +24,9 @@ func throw_projectile() -> void:
 	if player:
 		var direction = (player.global_position - spawn_proyectile.global_position).normalized()
 		proyectile_instancia.apply_central_impulse(direction * 400)
+
+func take_damage(amount): 
+	hp-= amount
+	if hp <= 0:
+		queue_free()
+	print("HP ENEMIGO: ", hp)

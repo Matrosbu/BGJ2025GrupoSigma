@@ -1,7 +1,2 @@
-res://juego/jugador.tscn
-res://juego/Enemigo.tscn
 res://juego/ProyectilEnemigoLanzador.tscn
 res://juego/enemigo_lanzador.gd
-res://juego/EnemigoLanzador.tscn
-res://juego/proyectil_enemigo.gd
-res://juego/jugador.gd

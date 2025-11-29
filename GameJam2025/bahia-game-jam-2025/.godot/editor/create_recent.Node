@@ -1,9 +1,10 @@
-<<<<<<< HEAD
+Camera2D
+Button
+Label
+CanvasLayer
 CollisionShape2D
 Node2D
-Camera2D
 Marker2D
-=======
 Timer
 Marker2D
 AnimatedSprite2D
@@ -11,11 +12,3 @@ CollisionShape2D
 CharacterBody2D
 RigidBody2D
 Node2D
-Camera2D
->>>>>>> c439a6473bd376dab32a1a2617f080939725a584
-Area2D
-Sprite2D
-AnimationPlayer
-StaticBody2D
-CanvasLayer
-Control

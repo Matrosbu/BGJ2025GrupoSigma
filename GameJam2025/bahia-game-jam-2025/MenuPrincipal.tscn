@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvh2686xajk7q"]
+
+[ext_resource type="Script" uid="uid://bcxyd371pkiv2" path="res://menu_principal.gd" id="1_0oe1n"]
+
+[sub_resource type="SystemFont" id="SystemFont_0oe1n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ba235"]
+font = SubResource("SystemFont_0oe1n")
+font_size = 156
+
+[sub_resource type="SystemFont" id="SystemFont_5dpk2"]
+
+[node name="MenuPrincipal" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_0oe1n")
+
+[node name="Titulo" type="Label" parent="."]
+offset_left = -544.0
+offset_top = -283.0
+offset_right = 529.0
+offset_bottom = -70.0
+text = "TITULO JUEGO"
+label_settings = SubResource("LabelSettings_ba235")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = -254.0
+offset_top = 54.0
+offset_right = 257.0
+offset_bottom = 145.0
+theme_override_fonts/font = SubResource("SystemFont_5dpk2")
+theme_override_font_sizes/font_size = 50
+action_mode = 0
+text = "Jugar"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

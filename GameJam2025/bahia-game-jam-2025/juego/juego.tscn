@@ -23,7 +23,10 @@ texture = ExtResource("2_kgj2k")
 position = Vector2(118, 36)
 shape = SubResource("RectangleShape2D_wvbjv")
 
-[node name="SpawnPoint1" type="Marker2D" parent="."]
-position = Vector2(188, -44)
+[node name="SpawnEnemigoSimple" type="Marker2D" parent="."]
+position = Vector2(322, 87)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_wvbjv")]
+[node name="Jugador" parent="." instance=ExtResource("2_wvbjv")]
+
+[node name="SpawnThrower" type="Marker2D" parent="."]
+position = Vector2(212, 0)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b167yb3hi0qop" path="res://juego/juego.gd" id="1_kgj2k"]
 [ext_resource type="Texture2D" uid="uid://cjjtn8kvi3pj" path="res://icon.svg" id="2_kgj2k"]
-[ext_resource type="PackedScene" uid="uid://dkh8xvqtk4yvg" path="res://juego/jugador.tscn" id="2_wvbjv"]
+[ext_resource type="PackedScene" uid="uid://c65mquucseebl" path="res://juego/jugador.tscn" id="2_wvbjv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvbjv"]
 size = Vector2(249, 17)

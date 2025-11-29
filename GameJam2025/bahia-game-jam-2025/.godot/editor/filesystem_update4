@@ -1,5 +1,6 @@
-res://juego/EnemigoLanzador.tscn
-res://juego/enemigo_lanzador.gd
-res://juego/juego.gd
-res://juego/enemigo.gd
-res://juego/jugador.tscn
+res://juego/juego.tscn
+res://GameOver.tscn
+res://game_over.gd
+res://main.tscn
+res://juego/jugador.gd
+res://MenuPrincipal.tscn

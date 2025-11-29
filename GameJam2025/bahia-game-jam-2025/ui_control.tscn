@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://sbdtj2a13vn4"]
+
+[node name="UiControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="2d" type="CanvasGroup" parent="."]
+
+[node name="Juego" type="Node2D" parent="2d"]
+
+[node name="Plataformas" type="TileMapLayer" parent="2d/Juego"]
+
+[node name="Background" type="TileMapLayer" parent="2d/Juego"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="2d/Juego"]
+
+[node name="HItbox" type="CollisionShape2D" parent="2d/Juego/CharacterBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="2d/Juego/CharacterBody2D"]
+
+[node name="UI" type="CanvasGroup" parent="."]

@@ -3,8 +3,7 @@ extends CharacterBody2D # Or whatever your enemy's root node is
 @onready var spawn_proyectile: Node2D = $SpawnProyectil # Path to your projectile spawn point
 
 func _ready() -> void:
-	throw_projectile()
-	# Example: Start throwing projectiles after a delay or based on enemy behavior
+	$AttackTimer.start()
 	pass
 
 func throw_projectile() -> void:
@@ -22,3 +21,8 @@ func throw_projectile() -> void:
 		# Example: Throw in a fixed direction
 	var throw_direction = Vector2(1, 0).rotated(global_rotation) # Throw forward relative to enemy
 	proyectile_instancia.apply_central_impulse(Vector2(200,-200))
+
+
+func _on_attack_timer_timeout() -> void:
+	throw_projectile()
+	pass # Replace with function body.

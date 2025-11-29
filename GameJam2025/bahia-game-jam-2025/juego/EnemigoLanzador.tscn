@@ -30,3 +30,8 @@ shape = SubResource("RectangleShape2D_nptuq")
 
 [node name="SpawnProyectil" type="Marker2D" parent="."]
 position = Vector2(0, -107)
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

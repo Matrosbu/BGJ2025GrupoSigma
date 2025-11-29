@@ -1,3 +1,2 @@
-res://ui_control.tscn
-res://UI/ui.tscn
 res://juego/juego.tscn
+res://juego/character_body_2d.gd

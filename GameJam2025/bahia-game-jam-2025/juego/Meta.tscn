@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://djb48i2up0yg7"]
+
+[ext_resource type="Texture2D" uid="uid://dykdbcl27r57e" path="res://PlaceHoldersArte/flag-7560075_640.webp" id="1_avtwn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ie6df"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_avtwn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi4kc"]
+size = Vector2(28, 72)
+
+[node name="Meta" type="Area2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.026558e-06, 1.6093254e-06)
+scale = Vector2(0.04375, 0.1125)
+sprite_frames = SubResource("SpriteFrames_ie6df")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oi4kc")

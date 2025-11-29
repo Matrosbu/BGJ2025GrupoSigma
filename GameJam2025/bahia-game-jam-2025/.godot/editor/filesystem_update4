@@ -3,3 +3,5 @@ res://juego/enemigo_lanzador.gd
 res://juego/juego.gd
 res://juego/enemigo.gd
 res://juego/jugador.tscn
+res://main.tscn
+res://juego/Meta.tscn

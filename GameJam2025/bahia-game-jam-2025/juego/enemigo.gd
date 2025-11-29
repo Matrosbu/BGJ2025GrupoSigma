@@ -8,7 +8,7 @@ func _ready():
 	player = get_tree().get_first_node_in_group("player")
 	add_to_group("enemy")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if player:
 		var dir = (player.global_position - global_position).normalized()
 		velocity = dir * speed

@@ -1,13 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dkh8xvqtk4yvg"]
+[gd_scene load_steps=13 format=3 uid="uid://c65mquucseebl"]
 
-<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://bx6qfmxs4x33r" path="res://juego/jugador.gd" id="1_uljyr"]
-=======
-[ext_resource type="Script" path="res://juego/jugador.gd" id="1_uljyr"]
->>>>>>> 400b69bec0678edcd0a93c2c6997d63cbe4d5913
 [ext_resource type="Texture2D" uid="uid://bux6f8h4gm3bg" path="res://PlaceHoldersArte/bomhqZnTQyqVsW-YJh6tcw.webp" id="2_6ekb8"]
 [ext_resource type="Texture2D" uid="uid://cjjtn8kvi3pj" path="res://icon.svg" id="3_nma2j"]
-
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m64gt"]
 size = Vector2(20, 48)

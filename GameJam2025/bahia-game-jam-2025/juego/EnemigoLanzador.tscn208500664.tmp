@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxchu1chepp7x"]
+
+[ext_resource type="Script" uid="uid://dpdm6e7welhwt" path="res://juego/enemigo_lanzador.gd" id="1_xtipt"]
+[ext_resource type="Texture2D" uid="uid://dmwvpo7f046l4" path="res://PlaceHoldersArte/lanzador_place_holder.jpg" id="2_nqqbw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2n3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nqqbw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nptuq"]
+size = Vector2(40, 76)
+
+[node name="EnemigoLanzador" type="CharacterBody2D"]
+script = ExtResource("1_xtipt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.4305115e-06, 1.66893e-06)
+scale = Vector2(0.1851852, 0.32618028)
+sprite_frames = SubResource("SpriteFrames_e2n3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nptuq")
+
+[node name="SpawnProyectil" type="Marker2D" parent="."]
+position = Vector2(0, -107)
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

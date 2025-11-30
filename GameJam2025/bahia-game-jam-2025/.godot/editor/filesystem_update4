@@ -1,9 +1,6 @@
-res://juego/juego.tscn
-res://juego/EnemigoLanzador.tscn
-res://juego/Meta.tscn
 res://main.tscn
-res://juego/jugador.gd
-res://juego/Enemigo.tscn
-res://juego/enemigo.gd
-res://juego/enemigo_lanzador.gd
 res://juego/jugador.tscn
+res://creds.tscn
+res://MenuPrincipal.tscn
+res://menu_principal.gd
+res://creds.gd

@@ -8,6 +8,7 @@ var tiempo_iframe = 0.75
 var iframe = false
 var can_attack = false
 var active_hitbox_frames = 0;
+var facing = 1
 
 # Get the gravity from the project settings so you can sync with rigid body nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -29,6 +30,11 @@ func _physics_process(delta):
 	# Get the input direction.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * speed
+	if (!is_attacking):
+		if(velocity.x == 0):
+			$Sprite.play("standing")
+		else:
+			$Sprite.play("walking")
 	
 	if Input.is_action_just_pressed("attack") and !is_attacking:
 		is_attacking = true
@@ -40,6 +46,9 @@ func _physics_process(delta):
 		hit_frame()
 
 	move_and_slide()
+	
+	if(position.y >= 1000):
+		die()
 
 
 func _on_sprite_animation_finished() -> void:

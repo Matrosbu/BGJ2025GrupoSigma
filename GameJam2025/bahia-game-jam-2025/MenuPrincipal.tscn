@@ -46,5 +46,14 @@ theme_override_font_sizes/font_size = 50
 action_mode = 0
 text = "Salir"
 
+[node name="Creds" type="Button" parent="."]
+offset_left = -249.0
+offset_top = 320.0
+offset_right = 256.0
+offset_bottom = 403.0
+theme_override_font_sizes/font_size = 50
+text = "Creditos"
+
 [connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Creds" to="." method="_on_creds_pressed"]

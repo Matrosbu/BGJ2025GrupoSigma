@@ -31,9 +31,10 @@ func _physics_process(_delta):
 			turning_cooldown = COOLDOWN
 		
 		var margen_spawn = get_viewport().size.x / 2 + 200
-		if(player_distance > margen_spawn):
+		if(abs(player_distance) > margen_spawn):
 			velocity.x = 0
-		velocity.x = facing_direction * speed
+		else:
+			velocity.x = facing_direction * speed
 		velocity.y += gravity * _delta
 		move_and_slide()
 

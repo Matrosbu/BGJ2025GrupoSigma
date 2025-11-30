@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://d328tor4mmss6"]
+
+[ext_resource type="Script" uid="uid://b2dbgvpru318" path="res://creds.gd" id="1_vkwqs"]
+
+[sub_resource type="SystemFont" id="SystemFont_2oho2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkwqs"]
+font = SubResource("SystemFont_2oho2")
+font_size = 50
+
+[sub_resource type="SystemFont" id="SystemFont_s08tq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f42aa"]
+font = SubResource("SystemFont_s08tq")
+font_size = 50
+
+[node name="Creds" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vkwqs")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1082.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 195.0
+offset_right = 1596.0
+offset_bottom = 360.0
+text = "GRACIAS POR JUGAR NUESTRO JUEGO!"
+label_settings = SubResource("LabelSettings_vkwqs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 313.0
+offset_right = 1875.0
+offset_bottom = 886.0
+text = "PARTICIPARON:
+-Jeremias Atala: Apoyo
+-Lemus Victoriano: Arte 2D
+-Matias Rosenszvaig: Programación GODOT
+-Luca Staffa: Audio y diseño de niveles
+-Tamburelli Jeremias: Programación GODOT
+
+"
+label_settings = SubResource("LabelSettings_f42aa")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 825.0
+offset_right = 1223.0
+offset_bottom = 971.0
+theme_override_font_sizes/font_size = 50
+text = "MENU"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

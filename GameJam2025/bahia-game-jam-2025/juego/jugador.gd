@@ -7,16 +7,17 @@ var is_attacking = false
 var tiempo_iframe = 0.75
 var iframe = false
 var can_attack = false
+var active_hitbox_frames = 0;
 
 # Get the gravity from the project settings so you can sync with rigid body nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready() -> void:
 	add_to_group("player")
-	$HitboxGolpe/AttackHitbox.visible = false
+	$HitboxGolpe/AttackHitbox.visible = true
 	
 func _physics_process(delta):
-	
+	$HitboxGolpe/AttackHitbox.visible = active_hitbox_frames > 0
 	
 	# Add the gravity.
 	velocity.y += gravity * delta
@@ -32,15 +33,17 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("attack") and !is_attacking:
 		is_attacking = true
 		$Sprite.play("attack")
-		$HitboxGolpe/AttackHitbox.visible = true
-		
+		active_hitbox_frames = 0.1
+	
+	if (active_hitbox_frames > 0):
+		active_hitbox_frames -= delta
+		hit_frame()
 
 	move_and_slide()
 
 
 func _on_sprite_animation_finished() -> void:
 	if $Sprite.animation == "attack":
-		$HitboxGolpe/AttackHitbox.visible = false
 		$Sprite.play("standing")
 		is_attacking = false
 
@@ -82,11 +85,6 @@ func _on_hurt_box_body_entered(body: Node2D) -> void:
 		take_damage(15)
 	if body.is_in_group("meta"):
 		win()
-
-
-func _on_sprite_frame_changed() -> void:
-	if ($HitboxGolpe/AttackHitbox.visible):
-		hit_frame()
 
 func hit_frame():
 	var bodies = $HitboxGolpe.get_overlapping_bodies()

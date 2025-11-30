@@ -3,6 +3,7 @@ extends CharacterBody2D
 const COOLDOWN = 1.5
 
 var hp = 100
+var activated = false
 var speed = 200
 var player
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -15,12 +16,13 @@ func _ready():
 	add_to_group("enemy")
 
 func _physics_process(_delta):
+	var player_distance
 	if player:
-		player_direction = player.global_position.x - global_position.x
-		if(player_direction == 0):
+		player_distance = player.global_position.x - global_position.x
+		if(player_distance == 0):
 			player_direction = facing_direction
 		else:
-			player_direction = abs(player_direction) / player_direction
+			player_direction = abs(player_distance) / player_distance
 
 		if(turning_cooldown > 0):
 			turning_cooldown -= _delta
@@ -28,6 +30,9 @@ func _physics_process(_delta):
 			facing_direction = player_direction
 			turning_cooldown = COOLDOWN
 		
+		var margen_spawn = get_viewport().size.x / 2 + 200
+		if(player_distance > margen_spawn):
+			velocity.x = 0
 		velocity.x = facing_direction * speed
 		velocity.y += gravity * _delta
 		move_and_slide()

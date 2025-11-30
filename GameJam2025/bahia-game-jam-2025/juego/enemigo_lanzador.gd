@@ -22,7 +22,7 @@ func throw_projectile() -> void:
 	proyectile_instancia.global_position = spawn_proyectile.global_position
 	if player:
 		var direction = (player.global_position - spawn_proyectile.global_position).normalized()
-		proyectile_instancia.apply_central_impulse(direction * 400)
+		proyectile_instancia.apply_central_impulse(direction * 1200)
 
 func take_damage(amount): 
 	hp-= amount

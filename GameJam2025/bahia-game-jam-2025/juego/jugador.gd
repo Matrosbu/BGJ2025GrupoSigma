@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 var vida = 100
-var speed = 300.0
-var jump_speed = -400.0
+var speed = 500.0
+var jump_speed = -1050.0
 var is_attacking = false
 var tiempo_iframe = 0.75
 var iframe = false
@@ -13,7 +13,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready() -> void:
 	add_to_group("player")
+	$HitboxGolpe/AttackHitbox.visible = false
+	
 func _physics_process(delta):
+	
+	
 	# Add the gravity.
 	velocity.y += gravity * delta
 
@@ -81,9 +85,8 @@ func _on_hurt_box_body_entered(body: Node2D) -> void:
 
 
 func _on_sprite_frame_changed() -> void:
-	if $Sprite.animation == "attack":
-		if $Sprite.frame == 2:
-			hit_frame()
+	if ($HitboxGolpe/AttackHitbox.visible):
+		hit_frame()
 
 func hit_frame():
 	var bodies = $HitboxGolpe.get_overlapping_bodies()

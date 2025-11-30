@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://sbdtj2a13vn4"]
+[gd_scene load_steps=2 format=3 uid="uid://sbdtj2a13vn4"]
 
 [ext_resource type="PackedScene" uid="uid://drorq1nfclsnn" path="res://juego/juego.tscn" id="1_xvndu"]
-[ext_resource type="PackedScene" uid="uid://djb48i2up0yg7" path="res://juego/Meta.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
 
@@ -9,8 +8,5 @@
 follow_viewport_enabled = true
 
 [node name="Juego" parent="2D" instance=ExtResource("1_xvndu")]
-
-[node name="Meta" parent="2D/Juego" instance=ExtResource("2_0xm2m")]
-position = Vector2(93, -9)
 
 [editable path="2D/Juego"]

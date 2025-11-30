@@ -18,6 +18,7 @@ animations = [{
 size = Vector2(40, 76)
 
 [node name="EnemigoLanzador" type="CharacterBody2D"]
+scale = Vector2(3.2186399, 3.909943)
 collision_layer = 4
 script = ExtResource("1_xtipt")
 
@@ -25,12 +26,15 @@ script = ExtResource("1_xtipt")
 position = Vector2(-1.4305115e-06, 1.66893e-06)
 scale = Vector2(0.1851852, 0.32618028)
 sprite_frames = SubResource("SpriteFrames_e2n3p")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_nptuq")
+metadata/_edit_group_ = true
 
 [node name="SpawnProyectil" type="Marker2D" parent="."]
-position = Vector2(0, -107)
+position = Vector2(0.41562346, -36.57486)
+metadata/_edit_group_ = true
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 10.0

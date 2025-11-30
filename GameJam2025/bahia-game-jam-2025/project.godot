@@ -17,6 +17,8 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
@@ -52,3 +54,7 @@ start={
 2d_physics/layer_2="Jugador"
 2d_physics/layer_3="Enemigos"
 2d_physics/layer_4="Meta"
+
+[physics]
+
+2d/default_gravity=2800.0

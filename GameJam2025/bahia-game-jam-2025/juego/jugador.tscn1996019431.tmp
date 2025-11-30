@@ -79,8 +79,6 @@ metadata/_edit_group_ = true
 [node name="HitboxGolpe" type="Area2D" parent="."]
 position = Vector2(33, 49)
 scale = Vector2(1.0466549, 1.0466549)
-collision_layer = 2
-collision_mask = 4
 metadata/_edit_group_ = true
 
 [node name="AttackHitbox" type="CollisionShape2D" parent="HitboxGolpe"]

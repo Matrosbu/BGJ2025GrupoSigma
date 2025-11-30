@@ -18,6 +18,7 @@ animations = [{
 size = Vector2(28, 72)
 
 [node name="Meta" type="RigidBody2D"]
+scale = Vector2(5.770579, 5.189939)
 collision_layer = 8
 collision_mask = 0
 gravity_scale = 0.0

@@ -21,6 +21,7 @@ size = Vector2(72, 75)
 size = Vector2(73, 74)
 
 [node name="Enemigo" type="CharacterBody2D"]
+scale = Vector2(1.226966, 3.3489766)
 collision_layer = 4
 script = ExtResource("1_r06gs")
 

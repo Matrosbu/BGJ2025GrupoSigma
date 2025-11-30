@@ -21,6 +21,7 @@ size = Vector2(72, 75)
 size = Vector2(73, 74)
 
 [node name="Enemigo" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_r06gs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

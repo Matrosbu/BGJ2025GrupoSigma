@@ -8,7 +8,7 @@ func _ready() -> void:
 	add_to_group("enemy")
 	await get_tree().create_timer(1.0).timeout
 	var timer = Timer.new()
-	timer.wait_time = 5
+	timer.wait_time = 2
 	timer.autostart = true
 	timer.one_shot = false
 	add_child(timer)
